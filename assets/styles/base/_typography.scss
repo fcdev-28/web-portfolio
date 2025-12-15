@@ -1,5 +1,7 @@
+@use './variables';
+
 body {
-    font-family: $main-font;
-    background: $primary-color;
-    color: $text-color;
+    font-family: variables.$main-font;
+    background: variables.$primary-color;
+    color: variables.$text-color;
 }
