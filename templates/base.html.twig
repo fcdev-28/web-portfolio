@@ -14,6 +14,35 @@
         {% endblock %}
     </head>
     <body>
+        <nav class="navbar">
+            <a href="{{ path('home') }}" class="logo">InnovaDev</a>
+
+            <label for="menu-checkbox"><span>&#9776;</span></label>
+            <input type="checkbox" id="menu-checkbox">
+
+            <div class="nav-links">
+                <a href="{{ path('home') }}" {% if app.request.get('_route') matches '/^home/' %}class="active"{% endif %}>Inicio</a>
+                <a href="{{ path('about') }}" {% if app.request.get('_route') matches '/^about/' %}class="active"{% endif %}>Sobre Nosotros</a>
+                <a href="{{ path('projects') }}" {% if app.request.get('_route') matches '/^projects/' %}class="active"{% endif %}>Proyectos</a>
+                <a href="{{ path('services') }}" {% if app.request.get('_route') matches '/^services/' %}class="active"{% endif %}>Servicios</a>
+                <a href="{{ path('contact') }}" {% if app.request.get('_route') matches '/^contact/' %}class="active"{% endif %}>Contacto</a>
+            </div>
+        </nav>
+
         {% block body %}{% endblock %}
+
+        <footer class="footer">
+            <div class="footer-logo">
+                <a href="{{ path('home') }}" class="logo">InnovaDev</a>
+            </div>
+
+            <p class="footer-text">&copy; {{ "now" | date("Y") }} InnovaDev. Todos los derechos reservados.</p>
+
+            <nav>
+                <a href="{{ path('legal_notice') }}">Aviso legal</a>
+                <a href="{{ path('privacy_policy') }}">Política de privacidad</a>
+                <a href="{{ path('cookies_policy') }}">Cookies</a>
+            </nav>
+        </footer>
     </body>
 </html>
