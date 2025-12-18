@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}InnovaDev - Inicio{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('home') }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('home') }}
+{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <div class="hero">
+            <h1>InnovaDev: Construyendo el futuro de la Web</h1>
+            <p>Jóvenes desarroladores especializados en PHP, Symfony, JavaScript y apasionados por la IA y el Big Data.</p>
+
+            <div class="hero-buttons">
+                <a href="{{ path('projects') }}" class="btn-primary">Ver Proyectos</a>
+                <a href="{{ path('services') }}" class="btn-secondary">Nuestros Servicios</a>
+            </div>
+        </div>
+
+        <div class="main-section">
+
+        </div>
+    </div>
+{% endblock %}
