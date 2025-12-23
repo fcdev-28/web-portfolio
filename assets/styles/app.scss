@@ -1,11 +1,11 @@
-@use './base/variables';
-@use './base/reset';
-@use './base/typography';
+@use './base/variables' as *;
+@use './base/reset' as *;
+@use './base/typography' as *;
 
-@use './layout/header';
-@use './layout/footer';
-@use './layout/grid';
+@use './layout/header' as *;
+@use './layout/footer' as *;
+@use './layout/grid' as *;
 
-@use './components/buttons';
-@use './components/cards';
-@use './components/forms';
+@use './components/buttons' as *;
+@use './components/cards' as *;
+@use './components/forms' as *;
