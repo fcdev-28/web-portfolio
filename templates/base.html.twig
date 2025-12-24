@@ -17,11 +17,14 @@
         <div class="wrapper">
             <nav class="navbar">
                 <a href="{{ path('home') }}" class="logo">
-                    <img src="{{ asset('images/logo.png') }}" alt="InnovaDev Logo">
+                    <span class="logo-id">ID</span>
+                    <span class="logo-text">InnovaDev</span>
                 </a>
 
-                <label for="menu-checkbox"><span>&#9776;</span></label>
-                <input type="checkbox" id="menu-checkbox">
+                <section class="menu-toggle">
+                    <label for="menu-checkbox"><span>&#9776;</span></label>
+                    <input type="checkbox" id="menu-checkbox">
+                </section>
 
                 <div class="nav-links">
                     <a href="{{ path('home') }}" {% if app.request.get('_route') matches '/^home/' %}class="active"{% endif %}>Inicio</a>
@@ -35,13 +38,9 @@
             {% block body %}{% endblock %}
 
             <footer class="footer">
-                <div class="footer-logo">
-                    <a href="{{ path('home') }}" class="logo">InnovaDev</a>
-                </div>
+                <p class="footer-text">&copy; {{ "now" | date("Y") }} <a href="{{ path('home') }}">InnovaDev</a>. Todos los derechos reservados.</p>
 
-                <p class="footer-text">&copy; {{ "now" | date("Y") }} InnovaDev. Todos los derechos reservados.</p>
-
-                <nav>
+                <nav class="footer-links">
                     <a href="{{ path('legal_notice') }}">Aviso legal</a>
                     <a href="{{ path('privacy_policy') }}">Política de privacidad</a>
                     <a href="{{ path('cookies_policy') }}">Cookies</a>
