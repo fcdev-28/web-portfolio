@@ -38,9 +38,9 @@
             {% block body %}{% endblock %}
 
             <footer class="footer">
-                <p class="footer-text">&copy; {{ "now" | date("Y") }} InnovaDev. Todos los derechos reservados.</p>
+                <p class="footer-text">&copy; {{ "now" | date("Y") }} <a href="{{ path('home') }}">InnovaDev</a>. Todos los derechos reservados.</p>
 
-                <nav>
+                <nav class="footer-links">
                     <a href="{{ path('legal_notice') }}">Aviso legal</a>
                     <a href="{{ path('privacy_policy') }}">Política de privacidad</a>
                     <a href="{{ path('cookies_policy') }}">Cookies</a>

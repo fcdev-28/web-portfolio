@@ -1,0 +1,25 @@
+@use '../base/variables' as vars;
+
+.footer {
+    color: rgba(vars.$text-color, 0.5);
+
+    padding: vars.$spacing-l 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+
+    border-top: 1px solid rgba(vars.$text-color, 0.4);
+
+    a:hover {
+        color: vars.$text-color;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: row;
+        gap: vars.$spacing-m;
+    }
+}
