@@ -4,10 +4,16 @@ $accent-color: #00f5a0;
 $title-color: #ffffff;
 $text-color: #f4f4f4;
 
-$main-font: 'TASA Orbiter', sans-serif;
+$font: 'TASA Orbiter', sans-serif;
 
 $spacing-s: 0.5rem;
 $spacing-m: 1rem;
 $spacing-l: 2rem;
+$spacing-xl: 3rem;
+
+$font-size-s: 0.875rem;
+$font-size-m: 1rem;
+$font-size-l: 1.25rem;
+$font-size-xl: 1.5rem;
 
 @import url('https://fonts.googleapis.com/css2?family=TASA+Orbiter:wght@400..800&display=swap');

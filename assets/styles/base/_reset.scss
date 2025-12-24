@@ -1,5 +1,18 @@
+@use '../base/variables' as vars;
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    body {
+        background: vars.$secondary-color;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+
+        .wrapper {
+            min-height: 100vh;
+        }
+    }
 }
