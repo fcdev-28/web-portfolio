@@ -13,6 +13,10 @@ body {
     flex-direction: column;
     min-height: 100vh;
 
+    h1, h2, h3 {
+        color: vars.$title-color;
+    }
+
     .content {
         flex: 1;
     }

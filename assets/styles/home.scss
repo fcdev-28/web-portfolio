@@ -1,0 +1,34 @@
+@use "sass:color";
+@use "./base/variables" as vars;
+
+.content {
+    padding: 0 vars.$spacing-xl;
+
+    display: flex;
+    flex-direction: column;
+    gap: vars.$spacing-l;
+
+    .hero {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        background: linear-gradient(155deg,
+                color.adjust(vars.$accent-color, $lightness: -30%),
+                color.adjust(vars.$accent-color, $lightness: -10%));
+        border-radius: 15px;
+
+        padding: vars.$spacing-xl;
+
+        .hero-buttons {
+            display: flex;
+            align-items: center;
+            gap: vars.$spacing-l;
+
+            a {
+                padding: vars.$spacing-m vars.$spacing-l;
+            }
+        }
+    }
+}
