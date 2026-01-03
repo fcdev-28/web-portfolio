@@ -1,12 +1,61 @@
+# Traducciones al español de la barra de navegación
+nav.home: "Inicio"
+nav.about: "Sobre Nosotros"
+nav.projects: "Proyectos"
+nav.services: "Servicios"
+nav.contact: "Contacto"
+
+# Traducciones al español del pie de página
+footer.rights: "Todos los derechos reservados."
+footer.legal: "Aviso legal"
+footer.privacy: "Política de privacidad"
+footer.cookies: "Cookies"
+
+# Traducciones al español de plantilla 'home.html.twig'
+home.title: "Inicio"
+
+hero.title: "InnovaDev: Construyendo el futuro de la Web"
+hero.subtitle: "Jóvenes desarroladores especializados en PHP, Symfony, JavaScript y apasionados por la IA y el Big Data."
+hero.button.projects: "Ver Proyectos →"
+hero.button.services: "Nuestros Servicios"
+
+about.title: "Sobre Nosotros"
+about.text: "En InnovaDev somos tres desarrolladores web apasionados por la tecnología, especializados en el desarrollo de aplicaciones web avanzadas combinadas con Inteligencia Artificial y Big Data. Nuestro objetivo es transformar ideas en productos digitales inteligentes que aporten valor real a empresas y usuarios."
+
+skills.title: "Habilidades y Tecnologías"
+
+skills.web_dev.title: "Desarrollo Web"
+skills.web_dev.text: "Diseñamos y desarrollamos aplicaciones web robustas, seguras y escalables, aplicando buenas prácticas, arquitectura limpia y tecnologías modernas tanto en frontend como en backend."
+
+skills.ai_bd.title: "Inteligencia Artificial y Big Data"
+skills.ai_bd.text: "Integramos soluciones basadas en datos e Inteligencia Artificial para mejorar la toma de decisiones, automatizar procesos y extraer valor de grandes volúmenes de información."
+
+projects.featured.title: "Proyectos Destacados"
+projects.featured.placeholder: "Aquí puedes agregar una lista o galería de proyectos destacados junto con las respectivas tecnologías utilizadas"
+
+# Traducciones al español de la plantilla 'contact.html.twig'
+contact.name.label: "Nombre"
+contact.name.placeholder: "Tu nombre"
+contact.email.label: "Correo electrónico"
+contact.email.placeholder: "email@ejemplo.com"
+contact.subject.label: "Asunto"
+contact.subject.placeholder: "Qué quieres decirnos?"
+contact.message.label: "Mensaje"
+contact.message.placeholder: "Describe tu proyecto o pregunta..."
+contact.button: "Enviar mensaje"
+
+# Traducciones al español de la plantilla 'legal.html.twig'
 legal.notice.title: "Aviso legal"
 legal.notice.intro: "Este sitio web es un portfolio personal con fines informativos y profesionales."
 legal.notice.ip: "Todos los contenidos de esta web (textos, imágenes, diseño y código) están protegidos por derechos de autor y no pueden ser reproducidos sin autorización expresa del titular."
 legal.notice.contact: "Para cualquier consulta, puedes contactar en"
 
+# Traducciones al español de la plantilla 'privacy.html.twig'
 privacy.title: "Política de privacidad"
 privacy.intro: "Este sitio web respeta y protege los datos personales de sus usuarios."
 privacy.data: "Los datos personales recogidos a través del formulario de contacto (nombre y email) se utilizan únicamente para responder a las consultas enviadas."
 privacy.rights: "Puedes ejercer tus derechos de acceso, rectificación o eliminación enviando un email a contact.innovadev@gmail.com."
 
+# Traducciones al español de la plantilla 'cookies.html.twig'
 cookies.title: "Política de cookies"
 cookies.text: "Este sitio web no utiliza cookies propias ni de terceros."

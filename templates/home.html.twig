@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}InnovaDev - Inicio{% endblock %}
+{% block title %}{{ 'home.title'|trans }}{% endblock %}
 
 {% block stylesheets %}
     {{ parent() }}
@@ -16,26 +16,25 @@
     <div class="content">
         <div class="hero">
             <div class="hero-text">
-                <h1>InnovaDev: Construyendo el futuro de la Web</h1>
-                <p>Jóvenes desarrolladores especializados en PHP, Symfony, JavaScript y apasionados por la IA y el Big Data.</p>
+                <h1>{{ 'hero.title'|trans }}</h1>
+                <p>{{ 'hero.subtitle'|trans }}</p>
             </div>
 
             <div class="hero-buttons">
-                <a href="{{ path('projects') }}" class="btn-primary">Ver Proyectos →</a>
-                <a href="{{ path('services') }}" class="btn-secondary">Nuestros Servicios</a>
+                <a href="{{ path('projects', {'_locale': app.request.locale}) }}" class="btn-primary">
+                    {{ 'hero.button.projects'|trans }}
+                </a>
+                <a href="{{ path('services', {'_locale': app.request.locale}) }}" class="btn-secondary">
+                    {{ 'hero.button.services'|trans }}
+                </a>
             </div>
         </div>
 
         <div class="main-section">
             <div class="about">
-                <h2>Sobre Nosotros</h2>
+                <h2>{{ 'about.title'|trans }}</h2>
 
-                <p>
-                    En InnovaDev somos tres desarrolladores web apasionados por la tecnología, especializados en el
-                    desarrollo de aplicaciones web avanzadas combinadas con Inteligencia Artificial y Big Data.
-                    Nuestro objetivo es transformar ideas en productos digitales inteligentes que aporten valor real
-                    a empresas y usuarios.
-                </p>
+                <p>{{ 'about.text'|trans }}</p>
 
                 <div class="about-image">
                     <div class="team-avatar">
@@ -52,13 +51,14 @@
                     </div>
                 </div>
             </div>
+            
             <div class="skills">
-                <h2>Habilidades y Tecnologías</h2>
+                <h2>{{ 'skills.title'|trans }}</h2>
 
                 <div class="web-dev">
-                    <h3>Desarrollo Web</h3>
+                    <h3>{{ 'skills.web_dev.title'|trans }}</h3>
 
-                    <p> Diseñamos y desarrollamos aplicaciones web robustas, seguras y escalables,aplicando buenas prácticas, arquitectura limpia y tecnologías modernas tanto en frontend como en backend.</p>
+                    <p>{{ 'skills.web_dev.text'|trans }}</p>
 
                     <ul>
                         <li>PHP</li>
@@ -70,9 +70,9 @@
                 </div>
 
                 <div class="ia-bd">
-                    <h3>Inteligencia Artificial y Big Data</h3>
+                    <h3>{{ 'skills.ai_bd.title'|trans }}</h3>
 
-                    <p>Integramos soluciones basadas en datos e Inteligencia Artificial para mejorar la toma de decisiones, automatizar procesos y extraer valor de grandes volúmenes de información.</p>
+                    <p>{{ 'skills.ai_bd.text'|trans }}</p>
 
                     <ul>
                         <li>Machine Learning</li>
@@ -82,10 +82,9 @@
                     </ul>
                 </div>
             </div>
-            <div class="ft-projects">
-                <h2>Proyectos Destacados</h2>
 
-                {# TODO: Aquí puedes agregar una lista o galería de proyectos destacados junto con las respectivas tecnologías utilizadas #}
+            <div class="ft-projects">
+                <h2>{{ 'projects.featured.title'|trans }}</h2>
             </div>
         </div>
     </div>
