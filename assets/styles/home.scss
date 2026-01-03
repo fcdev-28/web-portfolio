@@ -19,6 +19,7 @@
                 color.adjust(vars.$accent-color, $lightness: -30%),
                 color.adjust(vars.$accent-color, $lightness: -10%));
         border-radius: 18px;
+        border-radius: 15px;
 
         padding: vars.$spacing-xl;
 
@@ -51,6 +52,7 @@
             }
 
             p {
+                max-width: 800px;
                 opacity: 0.85;
                 line-height: 1.6;
             }
@@ -63,9 +65,9 @@
 
                 .team-avatar {
                     background: linear-gradient(
-                        160deg,
-                        #151515,
-                        #0f0f0f
+                    160deg,
+                    #151515,
+                    #0f0f0f
                     );
                     width: 300px;
                     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
@@ -86,8 +88,8 @@
                 }
 
                 img {
-                    width: 130px;
-                    height: 130px;
+                    width: 120px;
+                    height: 120px;
                     object-fit: cover;
                     border-radius: 50%;
                     background: #1a1a1a;
@@ -154,11 +156,6 @@
                         border: 1px solid rgba(255, 255, 255, 0.12);
                         color: vars.$accent-color;
                         font-weight: 500;
-                        transition: background 0.3s ease;
-
-                        &:hover {
-                            background: color.adjust(black, $lightness: 10%);
-                        }
                     }
                 }
             }
