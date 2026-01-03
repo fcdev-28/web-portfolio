@@ -11,13 +11,14 @@
     .hero {
         display: flex;
         flex-direction: row;
+        gap: vars.$spacing-l;
         justify-content: space-between;
         align-items: center;
 
         background: linear-gradient(155deg,
                 color.adjust(vars.$accent-color, $lightness: -30%),
                 color.adjust(vars.$accent-color, $lightness: -10%));
-        border-radius: 15px;
+        border-radius: 18px;
 
         padding: vars.$spacing-xl;
 
@@ -31,4 +32,152 @@
             }
         }
     }
+    .main-section {
+    display: flex;
+    flex-direction: column;
+    gap: vars.$spacing-xl;
+
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        gap: vars.$spacing-m;
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        p {
+            max-width: 800px;
+            opacity: 0.85;
+            line-height: 1.6;
+        }
+
+        .about-image {
+            display: flex;
+            gap: 3rem;
+            margin-top: vars.$spacing-l;
+            justify-content: center;
+
+            .team-avatar {
+                background: linear-gradient(
+                160deg,
+                #151515,
+                #0f0f0f
+                );
+                width: 300px;
+                box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+                padding: 4%;
+                border-radius: 18px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+
+                p {
+                    text-align: center;
+                    margin-top: 2rem;
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    opacity: 0.8;
+                }
+            }
+
+            img {
+                width: 120px;
+                height: 120px;
+                object-fit: cover;
+                border-radius: 50%;
+                background: #1a1a1a;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-5px);
+                }
+            }
+        }
+    }
+
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        gap: vars.$spacing-l;
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .web-dev,
+        .ia-bd {
+            background: linear-gradient(
+                160deg,
+                #151515,
+                #0f0f0f
+            );
+            border-radius: 18px;
+            padding: vars.$spacing-l;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+
+            display: flex;
+            flex-direction: column;
+            gap: vars.$spacing-m;
+            justify-content: center;
+
+            h3 {
+                font-size: 1.3rem;
+                font-weight: 600;
+            }
+
+            p {
+                opacity: 0.8;
+                line-height: 1.6;
+            }
+
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: vars.$spacing-s;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    padding: 6px 14px;
+                    font-size: 0.85rem;
+                    border-radius: 999px;
+                    background: rgba(255, 255, 255, 0.08);
+                    border: 1px solid rgba(255, 255, 255, 0.12);
+                    color: vars.$accent-color;
+                    font-weight: 500;
+                }
+            }
+        }
+
+
+        @media (min-width: 900px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "title title"
+                "web ia";
+
+            h2 {
+                grid-area: title;
+            }
+
+            .web-dev {
+                grid-area: web;
+            }
+
+            .ia-bd {
+                grid-area: ia;
+            }
+        }
+    }
+}
+
 }
