@@ -12,7 +12,9 @@
             "driver": "MySQL",
             "name": "innovadev",
             "database": "innovadev",
-            "username": "root"
+            "connectionTimeout": 30,
+            "username": "root",
+            "askForPassword": true
         }
     ]
 }
