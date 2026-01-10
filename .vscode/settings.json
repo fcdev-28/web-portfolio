@@ -1,0 +1,20 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 33065,
+            "driver": "MySQL",
+            "name": "innovadev",
+            "database": "innovadev",
+            "connectionTimeout": 30,
+            "username": "root",
+            "askForPassword": true
+        }
+    ]
+}
