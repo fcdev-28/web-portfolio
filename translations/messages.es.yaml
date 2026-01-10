@@ -34,6 +34,9 @@ projects.featured.title: "Proyectos Destacados"
 projects.featured.placeholder: "Aquí puedes agregar una lista o galería de proyectos destacados junto con las respectivas tecnologías utilizadas"
 
 # Traducciones al español de la plantilla 'contact.html.twig'
+contact.title: "Contacto"
+contact.hero.title: "¡Hablemos de tu proyecto!"
+contact.hero.subtitle: "¿Tienes una idea o proyecto en mente? Estamos listos para ayudarte a hacerlo realidad. Rellena el formulario y nos pondremos en contacto contigo lo antes posible."
 contact.name.label: "Nombre"
 contact.name.placeholder: "Tu nombre"
 contact.email.label: "Correo electrónico"
@@ -42,7 +45,11 @@ contact.subject.label: "Asunto"
 contact.subject.placeholder: "Qué quieres decirnos?"
 contact.message.label: "Mensaje"
 contact.message.placeholder: "Describe tu proyecto o pregunta..."
-contact.button: "Enviar mensaje"
+contact.submit: "Enviar mensaje"
+contact.form.success: "¡Tu mensaje ha sido enviado correctamente! Nos pondremos en contacto contigo lo antes posible."
+contact.form.error: "Se ha producido un error al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde."
+contact.social: "O contáctanos a través de nuestras redes sociales:"
+contact.media: "Síguenos"
 
 # Traducciones al español de la plantilla 'legal.html.twig'
 legal.notice.title: "Aviso legal"

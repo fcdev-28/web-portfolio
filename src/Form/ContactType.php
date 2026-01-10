@@ -18,25 +18,32 @@ class ContactType extends AbstractType
         $builder
             ->add('name', TextType::class, [
                 'label' => 'contact.name.label', 
-                'placeholder' => 'contact.name.placeholder',
-                'required' => true
+                'required' => true,
+                'attr' => [
+                    'placeholder' => 'contact.name.placeholder'
+                ]
             ])
             ->add('email', EmailType::class, [
                 'label' => 'contact.email.label',
-                'placeholder' => 'contact.email.placeholder',
-                'required' => true
+                'required' => true,
+                'attr' => [
+                    'placeholder' => 'contact.email.placeholder'
+                ]
             ])
             ->add('subject', TextType::class, [
                 'label' => 'contact.subject.label',
-                'placeholder' => 'contact.subject.placeholder',
-                'required' => true
+                'required' => true,
+                'attr' => [
+                    'placeholder' => 'contact.subject.placeholder'
+                ]
             ])
             ->add('message', TextareaType::class, [
                 'label' => 'contact.message.label',
-                'placeholder' => 'contact.message.placeholder',
-                'required' => true
+                'required' => true,
+                'attr' => [
+                    'placeholder' => 'contact.message.placeholder'
+                ]
             ])
-            ->add('created', HiddenType::class)
         ;
     }
 

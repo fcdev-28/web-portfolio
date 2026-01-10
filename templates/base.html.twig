@@ -63,6 +63,20 @@
                 </div>
             </nav>
 
+            <div class="messages">
+                {% for message in app.flashes('success') %}
+                    <div class="success-message">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+                
+                {% for message in app.flashes('error') %}
+                    <div class="error-message">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+
             <div class="content">
                 {% block body %}{% endblock %}
             </div>

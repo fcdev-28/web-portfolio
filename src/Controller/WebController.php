@@ -2,6 +2,9 @@
 
 namespace App\Controller;
 
+use App\Entity\ContactMessage;
+use App\Form\ContactType;
+use App\Repository\ContactMessageRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -42,9 +45,25 @@ final class WebController extends AbstractController
     }
 
     #[Route('/{_locale}/contact', name: 'contact', requirements: ['_locale' => 'es|en'])]
-    public function contact(): Response
+    public function contact(Request $request, ContactMessageRepository $contactMessageRepository): Response
     {
-        return $this->render('contact.html.twig');
+        $contactMessage = new ContactMessage();
+        $form = $this->createForm(ContactType::class, $contactMessage);
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $contactMessageRepository->add($contactMessage);
+            $timestamp = new \DateTimeImmutable('now', new \DateTimeZone('UTC'));
+            $contactMessage->setCreated($timestamp);
+
+            $this->addFlash('success', 'contact.form.success');
+            $contactMessageRepository->add($contactMessage);
+        }
+
+        return $this->render('contact.html.twig', [
+            'form' => $form->createView()
+        ]);
     }
 
     #[Route('/{_locale}/legal_notice', name: 'legal_notice', requirements: ['_locale' => 'es|en'])]

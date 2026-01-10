@@ -1,8 +1,6 @@
 {% extends "base.html.twig" %}
 
 {% block title %}{{ 'contact.title'|trans }}{% endblock %}
-    
-{% endblock %}
 
 {% block stylesheets %}
     {{ parent() }}
@@ -15,5 +13,48 @@
 {% endblock %}
 
 {% block body %}
-    
+    <h1>{{ 'contact.hero.title'|trans }}</h1>
+    <h3>{{ 'contact.hero.subtitle'|trans }}</h3>
+
+    <div class="contact-form">
+        {{ form_start(form) }}
+            <div class="form-row">
+                {% for i in [form.name, form.email] %}
+                    <div class="form-group half-width">
+                        {{ form_row(i) }}
+                    </div>
+                {% endfor %}
+            </div>
+
+            {{ form_row(form.subject) }}
+            {{ form_row(form.message) }}
+
+            <button class="btn-primary" type="submit">{{ 'contact.submit'|trans }}</button>
+        {{ form_end(form) }}
+    </div>
+
+    <div class="other-contact">
+        <h2>{{ 'contact.social'|trans }}</h2>
+
+        <div class="email-contact">
+            {{ ux_icon('ic:outline-email') }}
+            <p>Email:</p>
+            <p>contact.innovadev@gmail.com</p>
+        </div>
+    </div>
+
+    <div class="social">
+        <h2>{{ 'contact.media'|trans }}</h2>
+
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/innovadev" target="_blank">
+                {{ ux_icon('mdi:linkedin') }}
+            </a>
+            <a href="https://github.com/InnovaDev" target="_blank">
+                {{ ux_icon('mdi:github') }}
+            </a>
+            <a href="https://twitter.com/Innovadev_" target="_blank">
+                {{ ux_icon('flowbite:x-solid') }}
+            </a>
+    </div>
 {% endblock %}
