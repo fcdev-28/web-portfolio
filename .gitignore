@@ -8,3 +8,8 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
+
+node_modules/
+/node_modules/
+
+config/reference.php
