@@ -1,0 +1,35 @@
+@use "sass:color";
+@use "../base/variables" as vars;
+
+a {
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: vars.$accent-color;
+    color: #003b28;
+    box-shadow: 0 8px 25px color.change(vars.$accent-color, $alpha: 0.35);
+
+    &:hover {
+        transform: translateY(-2px);
+        background-color: color.adjust(vars.$accent-color, $lightness: -8%);
+        color: #003b28;
+
+        transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    }
+}
+
+.btn-secondary {
+    background-color: color.change(white, $alpha: 0.08);
+    border: 2px solid color.change(white, $alpha: 0.4);
+    color: white;
+
+    &:hover {
+        background-color: color.change(white, $alpha: 0.15);
+        color: vars.$text-color;
+
+        transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    }
+}

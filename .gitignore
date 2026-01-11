@@ -13,3 +13,14 @@ node_modules/
 /node_modules/
 
 config/reference.php
+
+/.idea
+###> symfony/webpack-encore-bundle ###
+/node_modules/
+/public/build/
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-bundle ###
+
+/config/reference.php
+

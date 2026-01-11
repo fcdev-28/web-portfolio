@@ -1,0 +1,91 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'home.title'|trans }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('home') }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('home') }}
+{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <div class="hero">
+            <div class="hero-text">
+                <h1>{{ 'hero.title'|trans }}</h1>
+                <p>{{ 'hero.subtitle'|trans }}</p>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="{{ path('projects', {'_locale': app.request.locale}) }}" class="btn-primary">
+                    {{ 'hero.button.projects'|trans }}
+                </a>
+                <a href="{{ path('services', {'_locale': app.request.locale}) }}" class="btn-secondary">
+                    {{ 'hero.button.services'|trans }}
+                </a>
+            </div>
+        </div>
+
+        <div class="main-section">
+            <div class="about">
+                <h2>{{ 'about.title'|trans }}</h2>
+
+                <p>{{ 'about.text'|trans }}</p>
+
+                <div class="about-image">
+                    <div class="team-avatar">
+                        <img src="{{ asset('images/avatar_fr.png') }}" alt="Fran Requena">
+                        <p>Fran Requena</p>
+                    </div>
+                    <div class="team-avatar">
+                        <img src="{{ asset('images/avatar_prueba.png') }}" alt="Rodrigo Ceacero">
+                        <p>Rodrigo Ceacero</p>
+                    </div>
+                    <div class="team-avatar">
+                        <img src="{{ asset('images/avatar_fc.png') }}" alt="Fran Cañera">
+                        <p>Fran Cañera</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skills">
+                <h2>{{ 'skills.title'|trans }}</h2>
+
+                <div class="web-dev">
+                    <h3>{{ 'skills.web_dev.title'|trans }}</h3>
+
+                    <p>{{ 'skills.web_dev.text'|trans }}</p>
+
+                    <ul>
+                        <li>PHP</li>
+                        <li>Symfony</li>
+                        <li>JavaScript</li>
+                        <li>HTML5 & CSS3/Sass</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+
+                <div class="ia-bd">
+                    <h3>{{ 'skills.ai_bd.title'|trans }}</h3>
+
+                    <p>{{ 'skills.ai_bd.text'|trans }}</p>
+
+                    <ul>
+                        <li>Machine Learning</li>
+                        <li>Data Analysis</li>
+                        <li>Python</li>
+                        <li>TensorFlow</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ft-projects">
+                <h2>{{ 'projects.featured.title'|trans }}</h2>
+            </div>
+        </div>
+    </div>
+{% endblock %}

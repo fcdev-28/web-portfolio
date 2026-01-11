@@ -1,0 +1,25 @@
+@use './variables' as vars;
+
+body {
+    font-family: vars.$font;
+    color: vars.$text-color;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            color: vars.$accent-color;
+            transition: color 0.5s ease;
+        }
+
+        &.active {
+            color: vars.$accent-color;
+            font-weight: bold;
+        }
+        
+        &:active {
+            color: vars.$text-color;
+        }
+    }
+}
